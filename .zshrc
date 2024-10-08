@@ -1,6 +1,6 @@
-#if [ -n "$TMUX" ]; then
-#    source ~/.zshrc
-#fi
+if [ -n "$TMUX" ]; then
+    source ~/.zshrc
+fi
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -16,8 +16,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 #Path
 export PATH="$HOME/bin:$PATH"
-#export PATH="/mnt/c/Users/hendy/AppData/Local/Programs/Microsoft VS Code/bin:$PATH"
-#export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 # Add in zsh plugins
